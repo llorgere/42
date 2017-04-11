@@ -1,22 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_point.h                                         :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llorgere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/10 15:54:01 by llorgere          #+#    #+#             */
-/*   Updated: 2017/04/11 14:58:34 by llorgere         ###   ########.fr       */
+/*   Created: 2017/04/10 15:40:00 by llorgere          #+#    #+#             */
+/*   Updated: 2017/04/10 15:41:54 by llorgere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_POINT_H
-# define FT_POINT_H
+#include <stdlib.h>
 
-typedef struct	s_point
+char	*ft_strdup(char *src)
 {
-		int		x;
-		int		y;
-}				t_point;
+	int		i;
+	int		j;
+	char	*moc;
 
-#endif
+	i = 0;
+	j = 0;
+	while (src[i] != '\0')
+		i++;
+	moc = (char*)malloc(sizeof(*moc) * (i));
+	if (!moc)
+		return (0);
+	while (j < i)
+	{
+		moc[j] = src[j];
+		j++;
+	}
+	moc[j] = '\0';
+	return (moc);
+}

@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_point.h                                         :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llorgere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/10 15:54:01 by llorgere          #+#    #+#             */
-/*   Updated: 2017/04/11 14:58:34 by llorgere         ###   ########.fr       */
+/*   Created: 2017/04/10 13:59:03 by llorgere          #+#    #+#             */
+/*   Updated: 2017/04/10 14:02:24 by llorgere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_POINT_H
-# define FT_POINT_H
+void	ft_putchar(char c);
 
-typedef struct	s_point
+void	ft_is_negative(int n)
 {
-		int		x;
-		int		y;
-}				t_point;
-
-#endif
+	if (n >= 0)
+		ft_putchar('P');
+	else
+		ft_putchar('N');
+}
